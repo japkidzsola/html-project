@@ -45,3 +45,16 @@ nav ul li a {
     text-align: center;
     padding: 100px 20px;
 }
+
+#hero h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#hero p {
+    font-size: 1.2em;
+}
+
+#hero form {
+    margin-top: 20px;
+}
