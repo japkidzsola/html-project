@@ -208,3 +208,12 @@ footer .social-media li a {
     color: #fff;
     text-decoration: none;
 }
+
+.nav-toggle {
+    display: none;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
