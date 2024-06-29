@@ -244,3 +244,13 @@ footer .social-media li a {
         color: #fff;
     }
 }
+.cart {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.cart-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
