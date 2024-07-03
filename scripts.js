@@ -11,6 +11,24 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Please enter a valid email address.');
         }
     });
+
+    const contactForm = document.querySelector('#contact form');
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const nameInput = contactForm.querySelector('input[name="name"]');
+        const emailInput = contactForm.querySelector('input[name="email"]');
+        const messageInput = contactForm.querySelector('textarea[name="message"]');
+
+        const name = nameInput.value;
+        const email = emailInput.value;
+        const message = messageInput.value;
+
+        if (name && validateEmail(email) && message) {
+            alert('Thank you for your message!');
+        } else {
+            alert('Please fill in all fields with valid information.');
+        }
+    });
 });
 
 function validateEmail(email) {
