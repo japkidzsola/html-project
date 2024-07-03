@@ -9,3 +9,38 @@ function validateEmail(email) {
  navToggle.addEventListener('click', function () {
      navMenu.classList.toggle('visible');
  });
+
+
+ document.addEventListener('DOMContentLoaded', function () {
+    let cart = [];
+
+    // Function to update cart count
+    function updateCartCount() {
+        const cartCount = document.querySelector('.cart-count');
+        cartCount.textContent = cart.length;
+    }
+
+    // Add to cart functionality
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const product = button.closest('.product');
+            const productName = product.querySelector('h3').innerText;
+            cart.push(productName);
+            updateCartCount();
+            alert(`${productName} has been added to your cart!`);
+            // Store cart in local storage or update server if needed
+        });
+    });
+
+    // Function to show cart items (could be expanded with a modal or separate page)
+    document.querySelector('.cart-icon').addEventListener('click', function () {
+        if (cart.length === 0) {
+            alert('Your cart is empty.');
+        } else {
+            alert('Items in your cart:\n' + cart.join('\n'));
+        }
+    });
+
+    updateCartCount();
+});
