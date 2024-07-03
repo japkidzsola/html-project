@@ -1,3 +1,18 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const signUpForm = document.querySelector('#hero form');
+    signUpForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const emailInput = signUpForm.querySelector('input[name="email"]');
+        const email = emailInput.value;
+
+        if (validateEmail(email)) {
+            alert('Thank you for signing up!');
+        } else {
+            alert('Please enter a valid email address.');
+        }
+    });
+});
+
 function validateEmail(email) {
     const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return re.test(String(email).toLowerCase());
