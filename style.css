@@ -287,3 +287,9 @@ footer .social-media li a {
     top: -10px;
     right: -10px;
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .product {
+        width: calc(50% - 20px);
+    }
+}
